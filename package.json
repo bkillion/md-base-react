@@ -11,7 +11,7 @@
       "clean-dist": "npm run remove-dist && mkdir dist",
       "remove-dist": "rimraf ./dist",
       "prebuild": "npm run clean-dist",
-      "test": "jest --config ./jest.config.js",
+      "test": "jest --config ./config/jest.config.js",
       "debug": "node ./node_modules/babel-cli/bin/babel-node  --inspect-brk=30569 --nolazy ./tests.js | tap-spec"
     },
     "dependencies": {
@@ -69,8 +69,8 @@
     },
     "jest": {
       "moduleNameMapper": {
-        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assets/assets-xformer.js",
-        "\\.(css)$": "<rootDir>/assets/assets-xformer.js"
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/assets-xformer.js",
+        "\\.(css)$": "<rootDir>/config/assets-xformer.js"
       }
     }
   }
